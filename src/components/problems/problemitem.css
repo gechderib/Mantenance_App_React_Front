@@ -1,0 +1,14 @@
+.textStyle{
+    color: rgb(109, 89, 89);
+    text-align: justify;
+}
+
+.title{
+    color: rgb(14, 12, 12);
+
+}
+
+.solvedOrNot{
+position: sticky;
+
+}

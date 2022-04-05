@@ -1,0 +1,10 @@
+.contMain{
+    margin-top: 5%;
+    padding:2%;
+}
+.fixedUser{
+    margin-left: 5%;
+    margin-top: 3%;
+    position: sticky;
+    top: 0;
+}

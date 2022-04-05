@@ -1,0 +1,14 @@
+.cont{
+    margin-right: 5%;
+    margin-left: 5%;
+    color: rgba(0, 0, 0, 0.596);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+span{
+    color: rgb(0, 0, 0);
+    font-size: large;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
