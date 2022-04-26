@@ -1,4 +1,7 @@
-﻿/* http://keith-wood.name/calendars.html
+﻿import jQuery from "jquery"
+import $ from "jquery"
+
+/* http://keith-wood.name/calendars.html
    Ethiopian calendar for jQuery v2.1.0.
    Written by Keith Wood (wood.keith{at}optusnet.com.au) February 2010.
    Available under the MIT (http://keith-wood.name/licence.html) license. 

@@ -1,4 +1,6 @@
-﻿/* http://keith-wood.name/calendars.html
+﻿import jQuery from "jquery"
+import $ from "jquery"
+/* http://keith-wood.name/calendars.html
    Calendars for jQuery v2.1.0.
    Written by Keith Wood (wood.keith{at}optusnet.com.au) August 2009.
    Available under the MIT (http://keith-wood.name/licence.html) license. 

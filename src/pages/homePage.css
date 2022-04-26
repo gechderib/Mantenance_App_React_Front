@@ -16,3 +16,19 @@
     font-size: 30px;
     width: 150px;
 }
+
+.forImg{
+    border-radius: 20px;
+    /* The image used */
+  background-image: url("../assets/logo.jpg");
+
+  /* Full height */
+  height: 30px; 
+  width: 30px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}

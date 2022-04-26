@@ -24,7 +24,7 @@ function Register(props) {
       e.stopPropagation()
     }
     setValidated(true)
-    if(enteredEmail !== '' && enteredPassword.length >= 8 && enteredEmail.includes("@aait.edu.et")){
+    if(enteredEmail !== '' && enteredPassword.length >= 8 && enteredEmail.includes("@eag.gov.et")){
 
       const newUser = {
         email:enteredEmail,

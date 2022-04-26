@@ -1,3 +1,6 @@
+import jQuery from "jquery"
+import $ from "jquery"
+
 (function($) {
 	'use strict';
 	$.calendars.calendars.ethiopian.prototype.regionalOptions.am = {

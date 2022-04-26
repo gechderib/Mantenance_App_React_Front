@@ -1,8 +1,13 @@
 import {useState, useRef} from 'react'
+import AmCalander from '../amharicCalander/AmCalander';
 import ProbAddWrap from '../ui/ProbAddWrap';
 
 function ProblemAdd(props) {
   var user = JSON.parse(localStorage.getItem("user"));
+
+  var [display, setDisplay] = useState(true)
+  var [display1, setDisplay1] = useState(true)
+  
   var fullname = user["fullname"];
   var [itemType, setItemType] = useState([]);
   var [sysType, setItemSys] = useState([]);
@@ -14,6 +19,8 @@ function ProblemAdd(props) {
   const officeNumber = useRef();
   const time = useRef();
   const reportedProblem = useRef();
+  var otherType = useRef()
+  var otherSys = useRef()
 
   function handleAddProblem(e) {
     e.preventDefault()
@@ -25,8 +32,15 @@ function ProblemAdd(props) {
     const enteredtime = time.current.value;
     const enteredsex = sex;
     const enteredisUserDisabled = isDisable;
+
     const entereditemType = itemType
+    const enteredOtherType = otherType.current.value
+    entereditemType.push(enteredOtherType)
+
     const enteredsysType = sysType
+    const enteredOtherSys = otherSys.current.value
+    enteredsysType.push(enteredOtherSys)
+
     const enteredreportedProblem = reportedProblem.current.value;
 
     const problemInfo = {
@@ -41,12 +55,33 @@ function ProblemAdd(props) {
       itemType: entereditemType,
       sysType: enteredsysType,
       reportedProblem: enteredreportedProblem,
+
     };
-    console.log(problemInfo)
+    console.log(enteredOtherType)
+    console.log(entereditemType)
     props.onAddProblem(problemInfo)
   }
-
-
+  
+  function handleOther(e){
+  
+    if(display){
+      console.log("eeeeeeeeeee")
+      setDisplay(false)
+    }
+    else(
+      setDisplay(true)
+    )
+  }
+  function handleOther1(e){
+  
+    if(display1){
+      console.log("eeeeeeeeeee")
+      setDisplay1(false)
+    }
+    else(
+      setDisplay1(true)
+    )
+  }
   function handleCheckItem(e){
 
     if(e.target.checked){
@@ -140,21 +175,7 @@ function ProblemAdd(props) {
           </div>
           <div className="form-group col-md-6">
             <label htmlFor="time">ሰዓት</label>
-            <input
-              type="date"
-              className="form-control"
-              id="time"
-              placeholder="ሰዓት"
-              ref={time}
-            />
-            {/* <input 
-            type="text" 
-            className="form-control"
-            
-            placeholder="ሰዓት"
-            ref={time} 
-            id="popupDatepicker" /> */}
-
+            <AmCalander  className1="form-control" placeholder1="ሰዓት" reference={time} />
           </div>
         </div>
         <div className="form-row">
@@ -283,11 +304,21 @@ function ProblemAdd(props) {
               name="other"
               id="other"
               value="ሌላ"
-              onClick={handleCheckItem} 
+              onClick={handleOther} 
             />
-            <label className="form-check-label" htmlFor="other">
+            <label  className="form-check-label" htmlFor="other">
             ሌላ
             </label>
+            <input
+              type="text"
+              className="form-control"
+              id="other"
+              placeholder="other..."
+              style={{display: display?"none":"" }}
+              ref={otherType}
+            />
+         
+
           </div>
         </div>
 
@@ -335,6 +366,7 @@ function ProblemAdd(props) {
             PIS
             </label>
           </div>
+
           <div className="form-check mr-4">
             <input
               className="form-check-input"
@@ -342,12 +374,22 @@ function ProblemAdd(props) {
               name="oth"
               id="oth"
               value="ሌላ"
-              onClick={handleCheckSys}
+              onClick={handleOther1}
             />
             <label className="form-check-label" htmlFor="oth">
             ሌላ
             </label>
+            <input
+              type="text"
+              className="form-control"
+              id="other"
+              placeholder="other..."
+              style={{display: display1?"none":"" }}
+              ref={otherSys}
+            />
           </div>
+
+
         </div>
 
         <div className="form-group">

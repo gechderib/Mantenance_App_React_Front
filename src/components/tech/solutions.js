@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import AmCalander from "../amharicCalander/AmCalander";
 import SolutionWrap from "../ui/SolutionWrap";
 
 
@@ -95,11 +96,11 @@ function Solution(props) {
         <div className ="form-row">
           <div className ="form-group col-md-6">
             <label forHtml="startTime">የ ተጀመርበት ሰአት</label>
-            <input type="date" className ="form-control" id="startTime" ref={startTime} />
+            <AmCalander  className1="form-control" placeholder1="ሰዓት" reference={startTime} />
           </div>
           <div className ="form-group col-md-6">
             <label forHtml="endTime">የ ተጠናቀቀበት ሰአት</label>
-            <input type="date" className ="form-control" id="endTime" ref={endTime} />
+            <AmCalander  className1="form-control" placeholder1="ሰዓት" reference={endTime} />
           </div>
         </div>
         <div className ="form-row">

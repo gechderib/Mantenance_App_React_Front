@@ -9,7 +9,7 @@ function MainNav(props) {
   return (
     <div className="mb-5" >
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
-        <img alt="logo"/>
+        <img alt="logo" src=""/>
         <a className="navbar-brand" href="/">
         የ ፍትህ ሚኒስተር
         </a>

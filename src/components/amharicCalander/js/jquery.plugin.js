@@ -1,3 +1,6 @@
+import jQuery from "jquery"
+import $ from "jquery"
+
 /* globals JQClass */
 /*! Simple JavaScript Inheritance
  * By John Resig http://ejohn.org/
